@@ -2,21 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin: 16px auto;
+    /* margin: 16px auto; */
 }
 body{
-    background-color: #f2f2f2;
+    background-color: #025159;
+    font-family: 'Offside', cursive;
+}
+.num{
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    width: 100%;
+
 }
 .wrapper{
-    width: 700px;
-    height: 1000px;
+    width: 60%;
+
+    /* height: 100%; */
     /* border: 1px solid black; */
-    background-color: #D99E6A;
+    background-color:#7ab8bf;
     border-radius: 20px;
+    margin:auto;
+    padding: 1px;
 }
 h1{
     text-align: center;
     padding-top: 32px;
+    font-size: 64px;
+    letter-spacing: 5px;
+    color: white;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 .inputs{
     margin:24px auto;
@@ -25,25 +40,54 @@ h1{
     width: 80%;
 }
 .get-ans{
-    width: 400px;
-    height: 40px;
+    width: 60%;
+    height: 64px;
     border-radius: 5px;
     border: none;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
-box{
-    display: block;
-    min-width: 40px;
-    min-height: 40px;
-    width: 70px;
-    height: 70px;
-    border: 1px solid black;
-    /* border-radius: 10px; */
-    margin: 0.1em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    background-color: rgb(193,193,192);
-    /* padding: 1em; */
-    font-size: 1.5em;
-    text-align: center;
+.check-btn{
+    width: 20%;
+    border-radius: 5px;
+    background-color:white;
+    color: black;
+    font-size: 32px;
+    border: none;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Offside', cursive;
 
+}
+
+.box{
+    width:13%;
+    height: 130px;
+    border-radius: 16px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    background-color:#c4eef2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: space-evenly;
+}
+
+.start-btn{
+    font-size: 32px;
+    padding: 16px;
+    width: 20%;
+    margin:30px auto;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: none;
+    font-family: 'Offside', cursive;
+    display:block;
 }

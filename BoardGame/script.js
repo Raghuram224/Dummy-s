@@ -1,10 +1,31 @@
-const WORDS = ["come", "bell", "bear", "play", "sing", "bird", "bean", "game", "rice", "four", "five", "tree", "keep", "dark", "moon", "cool"];
-const BOXES=_('boxes');
+const WORDS = [ "clay", "play", "sing", "bird", "bean", "game", "rice", "four", "five", "tree", "keep", "dark", "moon", "cool"];
+console.log(WORDS.length);
 
+const BOXES=_('boxes');
+const INP=_('inp');
 function _(id){
     return document.getElementById(id);
 }
 
+
+function matchWord(element){
+    
+    console.log(element);
+    element.style.backgroundColor='green';
+    INP.textContent+=element.textContent;
+
+}
+function check(){
+    let guess=INP.textContent;
+    if(WORDS.includes(guess)){
+        
+        INP.textContent=" ";
+    }
+    else{
+        console.log("not exist");
+        INP.textContent=" ";
+    }
+}
 
 function splitArr(){
     let scrambledArray=[]
@@ -20,8 +41,8 @@ function splitArr(){
 function main(){
     let newList=splitArr();
     let string="";
-    for(let i=1;i<=(WORDS.length*2);i++){
-        string+=`<span class="box" id=b${i} onclick="disappear(this)"> <a class="num">${newList[i]}</a></span>`;
+    for(let i=0;i<(WORDS.length*2);i++){
+        string+=`<span class="box" id=b${i} > <a class="num" onclick="matchWord(this)">${newList[i]}</a></span>`;
     }
     BOXES.innerHTML=string;
     
