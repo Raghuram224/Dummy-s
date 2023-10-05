@@ -11,17 +11,22 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>UNSCRAMBLE</h1>
+        <h1 >UNSCRAMBLE</h1>
         <div class="inputs">           
-            <div id="inp" class="get-ans"></div>
-            <button type="button" id="btn" onclick="check()" class="check-btn">Check</button>
+            <div id="inp" class="get-ans" ></div>
+            <div class="btn">
+                <button type="button" id="btn" onclick="check()" class="check-btn font">Check</button>
+            </div>
         </div>
        
 
         <div class="boxes" id="boxes">
             
         </div>
-        <button type="button" id="btn" onclick="main()" class="start-btn">Start</button>
+        <div class="btn">
+            <button type="button" id="startbtn" onclick="main()" class="start-btn font">Start</button>
+        </div>
+       
         
     </div>
     <script src="script.js"></script>

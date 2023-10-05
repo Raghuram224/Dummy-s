@@ -1,93 +1,169 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* margin: 16px auto; */
+    font-family: 'Offside', cursive;
+    transition: 350ms ease-in-out;
+}
+:root{
+    --green:#00FF7F;
+    --black:black;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color:var(--black);
 }
 body{
-    background-color: #025159;
-    font-family: 'Offside', cursive;
-}
-.num{
-    display: block;
-    text-align: center;
-    font-size: 3em;
-    width: 100%;
-
-}
-.wrapper{
-    width: 60%;
-
-    /* height: 100%; */
-    /* border: 1px solid black; */
-    background-color:#7ab8bf;
-    border-radius: 20px;
-    margin:auto;
-    padding: 1px;
-}
-h1{
-    text-align: center;
-    padding-top: 32px;
-    font-size: 64px;
-    letter-spacing: 5px;
-    color: white;
-    text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-}
-.inputs{
-    margin:24px auto;
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-}
-.get-ans{
-    width: 60%;
-    height: 64px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-    background-color: white;
-}
-.check-btn{
-    width: 20%;
-    border-radius: 5px;
-    background-color:white;
-    color: black;
-    font-size: 32px;
-    border: none;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-    font-family: 'Offside', cursive;
-
-}
-
-.box{
-    width:13%;
-    height: 130px;
-    border-radius: 16px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-    background-color:#c4eef2;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wrapper{
+    border: 2px solid black;
+    width: 90%;
+    margin: auto;
+    color: white;
 
+    background-color:var(--black);
+    box-shadow: 0px 15px 60px #00FF7F;
+    outline: 1px solid #2b9962;
+    border-radius: 10px;
+    padding: 0.5em;
+ 
+  
+}
+.wrapper>h1{
 
+    color: var(--green);
+    margin: 0.5em auto;
+    width: 80%;
+
+    text-align: center;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+.inputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5em auto;
+    width: 90%;
+    
+    padding: 0.2em;
+
+}
+.inputs>*{
+    margin: 0.3em;
+}
+.get-ans{
+   
+    width: 60%;
+    font-size: 1.3em;
+    text-align: center;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 5px;
+    border-bottom:2px solid white ;
+    border-left: 2px solid white;
+    
 }
 .boxes{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box{
+    display: block;
+    background-color:var(--black);
+    border: 1px solid #e3e3e3;
+    min-height: 10%;
+    min-height: 10%;
+    height: 15%;
+    width:15%;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.5em;
+    margin: 0.3em;
+    border-radius: 10px;
+    font-weight: 500;
+ 
 }
 
+
+.btn:hover .font{
+    background-color: var(--green);
+    color: white;
+
+}
+.font{
+    color: var(--green);
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 30px;
+
+}
+.box:active{
+    scale: calc(0.98);
+}
+.start-btn:active{
+    scale: calc(0.98);
+   
+}
+.check-btn:active{
+    scale: calc(0.98);
+   
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
 .start-btn{
-    font-size: 32px;
-    padding: 16px;
-    width: 20%;
-    margin:30px auto;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    border: none;
-    font-family: 'Offside', cursive;
-    display:block;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.won{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--green);
+}
+
+
+@media screen and (min-width:481px) {
+    h1{
+        font-size: 50px;
+    }
+    .inputs,.btn,.boxes{
+        font-size: 1.3em;
+    }
+    
+}
+
+@media screen and (min-width:822px) {
+    .wrapper{
+        width: 40%;
+        
+    }
+    h1{
+        font-size: 50px;
+    }
+    .inputs,.btn,.boxes{
+        font-size: 1.3em;
+    }
+    .get-ans{
+        font-size: 1.5em;
+    }
+    
 }
