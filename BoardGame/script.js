@@ -6,6 +6,7 @@ const BOXES=_('boxes');
 const INP=_('inp');
 let clickedValue=[];
 let selectedText = [];
+let clicked=false;
 
 const btn=_('startbtn');
 function _(id){
@@ -21,7 +22,9 @@ function matchWord(element){
  
     element.style.backgroundColor='#fefefe';
     element.style.color="black";
+    element.style.visibility="hidden";
     output+=element.textContent;
+    
     
     
     INP.textContent+=output.split(" ").join("");
@@ -62,6 +65,8 @@ function check(){
                 document.getElementById(clickedValue[i]).firstElementChild.textContent = selectedText[i];
                 document.getElementById(clickedValue[i]).style.backgroundColor="transparent";
                 document.getElementById(clickedValue[i]).style.color="white";
+                document.getElementById(clickedValue[i]).style.visibility="visible";
+
                 
 
             }
