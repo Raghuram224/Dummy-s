@@ -19,7 +19,8 @@ function matchWord(element){
     selectedText.push(element.textContent);
     
  
-    element.style.backgroundColor='#00FF7F';
+    element.style.backgroundColor='#fefefe';
+    element.style.color="black";
     output+=element.textContent;
     
     
@@ -60,8 +61,11 @@ function check(){
                 document.getElementById(clickedValue[i]).firstElementChild.textContent = selectedText[i];
                 document.getElementById(clickedValue[i]).firstElementChild.textContent = selectedText[i];
                 document.getElementById(clickedValue[i]).style.backgroundColor="transparent";
+                document.getElementById(clickedValue[i]).style.color="white";
+                
 
             }
+           
         
             clickedValue = [];
             selectedText = [];
