@@ -6,13 +6,17 @@
     transition: 350ms ease-in-out;
 }
 :root{
-    --green:#00FF7F;
-    --black:black;
+
+    --font-color: #fefefe;
+    --font-color-sub: #7e7e7e;
+    --bg-color: #111;
+    --main-color: #fefefe;
+    --box-shadow: 5px 5px var(--main-color);
 }
 html,body{
     width: 100%;
     height: 100%;
-    background-color:var(--black);
+    background-color:var(--bg-color);
 }
 body{
     display: flex;
@@ -20,25 +24,26 @@ body{
     align-items: center;
 }
 .wrapper{
-    border: 2px solid black;
+    border: 2px solid var(--main-color);
     width: 90%;
     margin: auto;
     color: white;
 
-    background-color:var(--black);
-    box-shadow: 0px 15px 60px #00FF7F;
-    outline: 1px solid #2b9962;
+    background-color:var(--bg-color);
+ 
     border-radius: 10px;
     padding: 0.5em;
+    box-shadow: var(--box-shadow);
  
   
 }
 .wrapper>h1{
 
-    color: var(--green);
+
     margin: 0.5em auto;
     width: 80%;
-
+    box-shadow: var(--box-shadow);
+    border: 1px solid white;
     text-align: center;
 }
 button{
@@ -68,8 +73,8 @@ button{
     margin: auto;
     padding: 0.5em;
     border-radius: 5px;
-    border-bottom:2px solid white ;
-    border-left: 2px solid white;
+    border-bottom:5px solid var(--main-color) ;
+    border-left: 5px solid var(--main-color);
     
 }
 .boxes{
@@ -82,7 +87,7 @@ button{
 }
 .box{
     display: block;
-    background-color:var(--black);
+
     border: 1px solid #e3e3e3;
     min-height: 10%;
     min-height: 10%;
@@ -92,19 +97,21 @@ button{
     padding: 0.5em;
     font-size: 1.5em;
     margin: 0.3em;
-    border-radius: 10px;
+    border-radius: 20px  ;
     font-weight: 500;
+    box-shadow: var(--box-shadow);
  
 }
 
 
 .btn:hover .font{
-    background-color: var(--green);
-    color: white;
-
+    background-color: var(--main-color);
+    color: black;
+    
+    
 }
 .font{
-    color: var(--green);
+
     padding: 0.5em;
     margin: 0.5em;
     font-size: 1.2em;
