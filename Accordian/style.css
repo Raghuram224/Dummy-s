@@ -20,9 +20,10 @@ img{
     width: 2em;
 }
 h3{
+    
     color: var(--font-color);
     font-size:2em;
-}
+} 
 section{
     
     display: flex;
@@ -44,9 +45,9 @@ section{
     display: flex;
     flex-direction:  row;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
     padding: 1em;
+    /* border: 2px solid white; */
    
     
 
@@ -55,6 +56,12 @@ section{
     padding: 0.5em;
 }
 
+.qn{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+
 .ans{
     height: 0;
     overflow: hidden;
@@ -62,6 +69,7 @@ section{
 
     
 }
+
 .active .ans {
     padding: 1em;
     
