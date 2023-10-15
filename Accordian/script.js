@@ -39,7 +39,7 @@ for(let i=0;i<=questionsAndAnswers.length;i++){
     if(i%2==0){
         // console.log("hi");
        questionString+=` <div class="container"> \n <p class="qn"> ${questionsAndAnswers[i]} \n </p> \n </div> \n`;
-       console.log(questionString+ "qn");
+     
     }
     else{
         answerString+=`<div class="ans">  \n <p> ${questionsAndAnswers[i]} </p> \n </div> \n`;
