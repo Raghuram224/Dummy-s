@@ -38,7 +38,8 @@ for(let i=0;i<=questionsAndAnswers.length;i++){
     }
     if(i%2==0){
         // console.log("hi");
-       questionString+=` <div class="container"> \n <p class="qn"> ${questionsAndAnswers[i]} \n </p> \n </div> \n`;
+       questionString+=` <div class="container"> \n <p class="qn"> ${questionsAndAnswers[i]} \n </p> \n
+       <img src="assets/down.svg" alt="">\n </div> \n`;
      
     }
     else{
