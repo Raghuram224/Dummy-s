@@ -57,10 +57,29 @@ wrapper.innerHTML= `${finalString} `;
 
 for(let i=0; i<QUESTIONS.length;i++){
     QUESTIONS[i].addEventListener('click',function(){
+
         this.classList.toggle('active');
-        let img = document.getElementsByClassName(`img${i}`);
+        // let img = document.getElementsByClassName(`img${i}`);
+        let openedElement = document.querySelector('.open');
+        if(openedElement){
+            openedElement.classList.remove('open');
+            openedElement.classList.remove('active');
+
+        }
+        this.classList.add('open');
+        let img=QUESTIONS[i].querySelector('img');
+        if(this.classList.contains('active')){
+            img.src="assets/up.svg";
+        }
+        else{
+            img.src="assets/down.svg"
+        }
+       
+        
         
       
     })
 
 }
+
+   
