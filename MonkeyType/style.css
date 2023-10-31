@@ -129,6 +129,10 @@ li{
     /* background-clip: content-box; */
     
 }
+#timer{
+    display: block;
+    font-size: 2em;
+}
 .results>* ,#wpm{
     /* overflow: hidden; */
     /* margin: 0.5em; */

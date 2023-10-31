@@ -1,15 +1,16 @@
 let displayText= document.querySelector(".displaytext");
 let resultText=document.querySelector(".section");
+
 let textString="";
 let keyArr="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,;:''()[]{}/!@#$%^&*-_? ";
 let n = 0;
 let timeleft=60;
 // console.log(content);
 let spanId=0;
-let traverseN=0;
-// let contentList=[`In addition to its practical benefits, nature also has a profound impact on our physical and mental health. Spending time in nature has been shown to reduce stress, improve mood, and boost creativity. Nature can also help us to connect with our spiritual side and to appreciate the beauty of the world around us.`
-//                 ,`asdfasdf`]
-let contentList=["hello bro"];
+// let traverseN=0;
+let contentList=[`winston is one of the most laid-back people i know he is tall and slim with black hair and he always wears a t-shirt and black jeans his jeans have holes in them and his baseball boots are scruffy too he usually sits at the back of the class and he often seems to be asleep however when the exam results are given out he always gets an "A" i don't think hes as lazy as he appears to be science of creating sets of instructions that enable a computer to perform specific tasks or solve problems. It begins with identifying a problem or task that can be automated or addressed using a computer. Programmers then break down the problem, design algorithms, and write code in a programming language to guide the computer's actions. Syntax and semantics play a crucial role, as code must adhere to the rules and conventions of the chosen programming language and be logically sound. Testing and debugging are essential steps to ensure the code produces the desired outcomes. Optimization is often employed.`
+                ]
+// let contentList=["hello bro"];
 let content=contentList[0].split(" ");
 let isTimeRun=true;
 let displayTime= document.getElementById("timer");
@@ -18,11 +19,12 @@ let wrongLetters=0;
 let texEndNumber=0;
 let time;
 function timer(){
+    console.log("timer called")
     if(timeleft >0){
         timeleft--;
         displayTime.textContent=timeleft;
     }else{
-        
+        console.log("Should stop now...")
         clearInterval(timer);
         resultCaller();
         
@@ -65,9 +67,12 @@ function showResults(){
 
 
 function keyChecker(event){
-    if(n==texEndNumber-1 || timeleft===0){
+    console.log(n, texEndNumber)
+    if(n>=texEndNumber-2 || timeleft===0){
+        clearInterval(timer);
         resultText.innerHTML=showResults();
         resultCaller();
+        return 0;
     }
     if(isTimeRun==true){   
              
@@ -116,6 +121,7 @@ function resultCaller(){
 displayText.innerHTML=textAdder(content);
 
 document.body.addEventListener("keydown",keyChecker);
+
 
 
 
